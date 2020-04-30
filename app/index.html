@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <script src="bundle.js"></script>
+<!--    <script src="scripts/lib/single-spa.js"></script>-->
+<!--    <script src="scripts/lib/single-spa-angular1.js"></script>-->
+</head>
+<body>
+
+<!--ng-app kaldırıldı-->
+<div>
+    <h1>AngularJS App #2</h1>
+
+    <!-- ui-view yerine angularjs-container basıldı-->
+    <div class="container" id="angularjs-container"></div>
+
+<!--    <script src="scripts/vendor/node_modules/angular/angular.min.js"></script>-->
+<!--    <script src="scripts/vendor/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>-->
+
+<!--    <script src="scripts/app.js"></script>-->
+<!--    <script src="scripts/routes.js"></script>-->
+<!--    <script src="scripts/controllers/page1.js"></script>-->
+<!--    <script src="scripts/controllers/page2.js"></script>-->
+<!--    <script src="scripts/controllers/page3.js"></script>-->
+
+    <button onclick="toggleEs5App()">Toggle</button>
+
+    <script>
+        window.showEs5App = true;
+        singleSpa.registerApplication('es5-app', es5App, function (location) {
+            return showEs5App
+        });
+        singleSpa.start();
+
+        function toggleEs5App() {
+            // See https://github.com/CanopyTax/single-spa/blob/master/docs/single-spa-config.md#registering-applications
+            // Usually you have a path prefix or something in the url to determine if the app is active.
+            // I did not do so here out of laziness / to save time.
+            window.showEs5App = !window.showEs5App;
+            singleSpa.triggerAppChange();
+        }
+    </script>
+</div>
+</body>
+</html>
