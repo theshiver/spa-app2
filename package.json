@@ -1,5 +1,5 @@
 {
-    "name": "Demo Angularjs App 2",
+    "name": "demo-angularjs-app2",
     "version": "0.0.0",
     "dependencies": {
         "@uirouter/angularjs": "0.4.2",
