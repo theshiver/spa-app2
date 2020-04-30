@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     'app/scripts/controllers/page2.js',
                     'app/scripts/controllers/page3.js'
                 ],
-                dest: 'dist/app/bundle.js',
+                dest: 'dist/app/bundle2.js',
             },
         },
         connect: {
